@@ -1,82 +1,213 @@
-*{font-family: inter}
-/*<weight>: Use a value from 100 to 900*/
-/*<uniquifier>: Use a unique and descriptive class name*/
-
-.inter-<uniquifier> {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal }
+chatgpt styles
 
 
-body{background-color: #A1BBDE}
+/* General Reset */
+* {
+   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.landingpage{
-	display:flex;
-	flex-direction:column;
-	justify-content: center;
-	min-height: 80vh;
-	padding: 0 10vw;
-	text-align:left;
+h1,h2,h3,p{
+   font-family: "Inter";
+}
+body {
+  background-color: #A1BBDE;
+  margin:0;
+  padding:0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A1BBDE;
+  padding: 10px 30px;
+}
+
+.navbar img {
+  height: 50px;
+}
+
+.btns button {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh; /*full screen*/
+  padding: 0 10vw;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 12vw;  /* scales with screen */
+  line-height: 0.8;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-family:"Inter"
+}
+
+.hero h1 span {
+  display: block;
+}
+
+h2 span{
+ display: block;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 23px;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  
+}
+
+.button-container button {
+  border-radius: 20px;
+  background: #fccccc;
+  color: #000;
+  padding: 20px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Features + Offerings */
+.features, .offerings {
+  padding: 80px 10vw;
+  text-align: center;
+}
+
+.features h2, .offerings h2 {
+  font-size: 85px;
+  line-height: 0.9;
+}
+
+.features h2 span {
+  display: inline-block;
+  text-align: center;
+}
+
+.features p {
+  font-size: 23px;
+  margin-top: 20px;
 }
 
 
-h1{
-margin-bottom:0;
-margin-top:0;
-font-size :125px;
-color: black;
-line-height:0.8;
-font-family: inter
-}
-h1 span {display:block}
 
-p {font-size: 23px}
-
-button{
-	border-radius: 20px;
-	background:#fccccc;
-	color:#000000;
-	padding: 24px 24px; /*first is for top and second is for bottom*/
-	font-size:18px;
-	cursor:pointer;
-	border:none;	
-}
-.container {
-display: flex;
-gap: 20px; 
+.offers {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 60px;
 }
 
+.offers h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #333;
+}
 
-.navbar{
-	margin-top:0;
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-	background-color: #A1BBDE;
-	padding: 10px 10px;
-	/*box-shadow: 0 4px 6px rgba(0,0,0,0.2);*/
+.offers-grid {
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 100%;   /* use full page width */
+  margin: 0;         /* remove edges */
+  padding: 0 40px;   /* optional: keep a little breathing room on sides */
+}
+
+.offer-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-card img {
+  width: 150px;
+  height:150px;
+  margin-bottom: 20px;
+  border-radius: 20px
+}
+
+.offer-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.offer-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.offer-card a {
+  color: #00a6d6;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.offer-card .highlight {
+  font-weight: 600;
+  color: #333;
 }
 
 
-.navbar .logo img{
-	height:50px;
+/* footer styles */
+.site-footer {
+  background-color: #fccccc;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #333;
+  display:flex;
+  flex-direction:column;
+  align-items:right;
+  justify-content:flex-end
 }
 
-.navbar .navbarlinks li a:hover{
-	color: #A1BBDF	
+.site-footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;  /* makes centering easier */
+  max-width: 1200px;
+  position: relative;
 }
 
-.navbar-uls{
-	list-style:none;
-	display:flex;
-	gap:20px
-;
+
+
+.site-footer .footer-logo {
+   width: 60px;
+  margin-left: auto;
+  margin-right:20px
+
 }
-.navbar .btns button{
-	background-color:white;
-	color: black;
-	border-radius: 20px;
-	padding: 10px 10px;
-	gap:10px
+
 
