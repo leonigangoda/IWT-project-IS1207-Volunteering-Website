@@ -34,12 +34,10 @@ if (isset($_SESSION['error'])) {
     body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
     .dashboard-container { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; }
     h2 { text-align: center; margin-bottom: 20px; }
+    a {text-decoration: none;}
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
     .project-card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-align: center; background: #fff; }
-    .btn-all { padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; }
-    .btn-primary { background: #007bff; color: #fff; }
-    .btn-danger { background: #dc3545; color: #fff; }
-    .btn-warning { background: #ffc107; color: #000; }
+    .btn-all { padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; background: lightblue; color: #000;}
     .event-all { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
     .event-content { background: #fff; margin: 5% auto; padding: 20px; border-radius: 8px; width: 90%; max-width: 500px; max-height: 80vh; overflow-y: auto; }
     .close { float: right; cursor: pointer; font-size: 20px; }
@@ -65,8 +63,11 @@ if (isset($_SESSION['error'])) {
         <p><strong>Category:</strong> <?php echo htmlspecialchars($row['category']); ?></p>
         <p><?php echo htmlspecialchars($row['description']); ?></p>
 
+        <!-- View event Details -->
+        <a href="org_event_details.php?event_id=<?php echo $row['event_id']; ?>" class="btn-all" style="background: #17a2b8; color: white; margin-right: 5px;">View Details</a>
+        
         <!-- Edit a Created Event -->
-        <button class="btn-all btn-warning" onclick="openEditEvent(
+        <button class="btn-all" onclick="openEditEvent(
           '<?php echo $row['event_id']; ?>',
           '<?php echo htmlspecialchars($row['event_name']); ?>',
           '<?php echo date('Y-m-d\TH:i', strtotime($row['event_time'])); ?>',
@@ -75,7 +76,7 @@ if (isset($_SESSION['error'])) {
           '<?php echo htmlspecialchars($row['description']); ?>' )">Edit</button>
 
         <!-- Delete a Created Event-->
-        <a href="org_delete_event.php?id=<?php echo $row['event_id']; ?>" class="btn-all btn-danger" onclick="return confirm('Delete this event?')">Delete</a>
+        <a href="org_delete_event.php?id=<?php echo $row['event_id']; ?>" class="btn-all" onclick="return confirm('Delete this event?')">Delete</a>
       </div>
     <?php } ?>
   </div>
@@ -106,7 +107,7 @@ if (isset($_SESSION['error'])) {
       </select>
       <label>Description</label>
       <textarea name="description" maxlength="255"></textarea>
-      <button type="submit" class="btn-all btn-primary">Create</button>
+      <button type="submit" class="btn-all">Create</button>
     </form>
   </div>
 </div>
@@ -143,7 +144,7 @@ if (isset($_SESSION['error'])) {
       <label>Description</label>
       <textarea name="description" id="edit_description" maxlength="255"></textarea>
 
-      <button type="submit" class="btn-all btn-primary">Update</button>
+      <button type="submit" class="btn-all">Update</button>
     </form>
   </div>
 </div>
