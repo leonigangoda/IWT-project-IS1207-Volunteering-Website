@@ -1,7 +1,4 @@
-chatgpt styles
-
-
-/* General Reset */
+/*apply to the entire doc*/
 * {
    margin: 0;
   padding: 0;
@@ -200,8 +197,6 @@ h2 span{
   max-width: 1200px;
   position: relative;
 }
-
-
 
 .site-footer .footer-logo {
    width: 60px;
