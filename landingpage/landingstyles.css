@@ -84,6 +84,7 @@ h2 span{
   font-size: 18px;
   cursor: pointer;
   border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Features + Offerings */
@@ -204,5 +205,28 @@ h2 span{
   margin-right:20px
 
 }
+
+.whitet{
+color:white;
+display:inline;
+
+}
+.btns button{
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  padding: 3px 3px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  margin-left: 10px;   /* adds space between buttons */
+  transition: all 0.3s ease;
+}
+
+.btns button:hover {
+  background: #f0f0f0;
+}
+
+
 
 
