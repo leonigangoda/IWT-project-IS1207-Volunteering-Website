@@ -4,6 +4,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+* {
+   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("firstb.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* makes it scroll with the page */
+}
+
+/* optional: add a transparent overlay on top of background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(161, 187, 222, 0.3); /* opacity */
+  pointer-events: none; /* lets you click through */
+  z-index: -1; /* keeps it behind content */
+  backdrop-filter: blur(9px); /* adjust blur amount */
+}
 
 h1,h2,h3,p{
    font-family: "Inter";
@@ -129,7 +156,7 @@ h2 span{
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   max-width: 100%;   /* use full page width */
-  margin: 0;         /* remove edges */
+  margin: 5px;         /* remove edges */
   padding: 0 40px;   /* optional: keep a little breathing room on sides */
 }
 
