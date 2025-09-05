@@ -49,10 +49,10 @@ nav ul li a:hover {
 }
 
 /* Events Panels */
-.available-projects, .enrolled-events {
+.available-events, .enrolled-events {
   background: #fff;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 10px;
   flex: 1;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -61,13 +61,13 @@ h2 {
   font-size: 20px;
   margin-bottom: 15px;
   border-bottom: 1px solid #A1BBDE;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 /* Event Cards */
 .event-card {
   background:  #FFE6E7;
-  padding: 12px;
+  padding: 20px;
   border-radius: 6px;
   margin-bottom: 10px;
 }

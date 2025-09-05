@@ -41,7 +41,15 @@ $enrolled_events = $conn->query($enrolled_sql);
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <nav>
+        <div class="logo">SVT</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="explore events.html">Explore Events</a></li>
+            <li><a href="dashboard.html">My Dashboard</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
 
     <section class="dashboard">
         <div class="available-events">
