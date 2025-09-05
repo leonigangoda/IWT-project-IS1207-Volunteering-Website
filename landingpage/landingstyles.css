@@ -8,9 +8,22 @@
   font-weight: <weight>;
   font-style: normal }
 
+
+body{background-color: #A1BBDE}
+
+.landingpage{
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	min-height: 80vh;
+	padding: 0 10vw;
+	text-align:left;
+}
+
+
 h1{
 margin-bottom:0;
-margin-top:83px;
+margin-top:0;
 font-size :125px;
 color: black;
 line-height:0.8;
@@ -34,14 +47,36 @@ display: flex;
 gap: 20px; 
 }
 
-body{background-color: #A1BBDE}
 
-.landingpage{
+.navbar{
+	margin-top:0;
 	display:flex;
-	flex-direction:column;
-	justify-content: center;
-	min-height: 100vh;
-	padding: 0 10vw;
-	text-align:left;
+	justify-content:space-between;
+	align-items:center;
+	background-color: #A1BBDE;
+	padding: 10px 10px;
+	/*box-shadow: 0 4px 6px rgba(0,0,0,0.2);*/
 }
+
+
+.navbar .logo img{
+	height:50px;
+}
+
+.navbar .navbarlinks li a:hover{
+	color: #A1BBDF	
+}
+
+.navbar-uls{
+	list-style:none;
+	display:flex;
+	gap:20px
+;
+}
+.navbar .btns button{
+	background-color:white;
+	color: black;
+	border-radius: 20px;
+	padding: 10px 10px;
+	gap:10px
 
