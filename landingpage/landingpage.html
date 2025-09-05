@@ -1,8 +1,8 @@
 <head>
   <!--add the stylesheet for the landing page-->
-<link rel="stylesheet" href="styleindex.css">
+<link rel="stylesheet" href="landingstyles.css">
 
-<!-- add the font face for the website _Inter tthis will work with internet -->
+<!-- add the font face for the website _Inter this will work with internet -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -10,39 +10,110 @@
 </head>
 
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="Vollie logo"></a>
+    </div>
+    <div class="btns">
+      <button type="button" class="login-btn">Login</button>
+      <button type="button" class="signup-btn">Sign up to Vollie</button>
+    </div>
+  </nav>
 
-	<!--navgbar-->
-	<nav class="navbar">
-		<ul class="navbar-uls">
-	<div class= "logo">
-		<li> <a href="#"> <img src="logo.png"> </a> </li>	
-	
-		</ul></div>
-		<div class="btns">
-		<button type="submit" style="background-color:transparent; border:1.5px solid #ffffff; "> login </button>
-		<button type="submit"> sign up to Vollie </button>
-		
-		</div>
-		
-	<div class="landingpage">
-	<h1>
-		<span>connect.</span> 
-		<span>volunteer.</span>
-		<span>transform.</span>
-	</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>
+      <span>connect.</span>
+      <span>volunteer.</span>
+      <span>transform.</span>
+    </h1>
+    <p>
+      Connect organizations in need of help with volunteers who are ready to contribute.
+    </p>
+    <div class="button-container">
+      <button type="button">Be a Volunteer</button>
+      <button type="button">Find Volunteers</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
 
 
-	<p>connect organizations in need of help with volunteers who are ready to contribute.</p>
+  <section class="features">
+    <h2>
+      <span>one hub,<br>
+      <span>millions of connections</span>
+    </h2>
+    <p style="display:inline-block">
+      Vollie is a unified platform for organizers to find voluntary services for their projects,post event details,<br> and for volunteers to find opportunities to serve. 
+<br>
+Organizers post. Volunteers find. Impact happens. All in one platform: Vollie.
+    </p>
+    <div class="button-container" style="justify-content: center">
+      <button type="button" >Join Vollie Today</button>
+    </div>
+  </section>
 
-<!--to add the buttons-->
-	<form method="post" action= "ADD SIGN UP/LOGIN PAGE" > <!--yet to be added-->
-		<div class="button">
-			<div class= "container">
-				<button type="submit"> Be a Volunteer </button>
-				<button type="submit"> Find Volunteers </button>
-			</div> <!--closes the container addede for space in between buttons div-->
-		</div><!--closes the button div-->
-	</form>
-	</div> <!--closes the anding page div-->
+
+ </section>
+
+
+
+<!-- ui cards-->
+
+<section class="features">
+
+  <h2>What do we at Vollie do? </h2>
+
+  <div class="offers-grid">
+    	<div class="offer-card">
+      		<img src="feature1.jpg" alt="Find Projects">
+		<h3>Connects you with volunteerily projects</h3>
+      		<p>
+        	Explore updated listings of meaningful projects where your contribution truly matters. You’ll connect with responsive hosts who are actively seeking volunteers,
+		ensuring your applications don’t go unnoticed. <a href="#"> </a>
+      		</p>
+      		<p class="highlight">97% of members who send 3 applications receive suggestions from organizations!</p>
+    	</div>
+
+
+
+    <div class="offer-card">
+      		<img src="feature2.jpg" alt="Support agent">
+      		<h3>We've got your back with seeking volunteers</h3>
+      		<p>
+        	Count on Vollie for seeking volunteers for the projects to be launched. Live updates about projects posted in our website helps connect your organization with volunteers all around the country.
+      		</p>
+      		<p class="highlight">Join us to meet new volunteers</p>
+    </div>
+
+
+
+    <div class="offer-card">
+      <img src="feature3.jpg" alt="Verified host">
+      <h3>Connect with thousands of verified organizations </h3>
+      <p>
+        Each organization on Vollie is carefully reviewed and verified by our team. With hundreds of new projects added every month, 
+	you’ll have access to trusted opportunities across the island.
+      </p>
+      <p class="highlight">Explore our registered organizations!</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- footer -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <img src="logo.png" alt="Logo" class="footer-logo" width="150px" >
+	<p align="center">&copy; 2025 IWT Project Group 09. All rights reserved.</p>
+  </div>
+</footer>
+
 
 </body>
