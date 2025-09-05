@@ -42,9 +42,54 @@ if (isset($_SESSION['error'])) {
     .event-content { background: #fff; margin: 5% auto; padding: 20px; border-radius: 8px; width: 90%; max-width: 500px; max-height: 80vh; overflow-y: auto; }
     .close { float: right; cursor: pointer; font-size: 20px; }
     input, select, textarea { width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #333;
+      padding: 10px 20px;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+    <nav>
+        <div class="logo">Vollie</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="explore events.html">Explore Events</a></li>
+            <li><a href="org_dashboard.php">My Dashboard</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
 <div class="dashboard-container">
   <h2>My Events</h2>
   <?php echo $message; ?>
