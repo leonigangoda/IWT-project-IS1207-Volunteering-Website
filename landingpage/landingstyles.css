@@ -85,6 +85,7 @@ body {
 
 h2 span{
  display: block;
+ 
 }
 
 .hero p {
@@ -113,12 +114,15 @@ h2 span{
 
 /* Features + Offerings */
 .features, .offerings {
-  min-height: 100vh;
+  min-height: 75vh;
+  padding: 20px 60px;
   text-align: center;
 }
 
 .features h2, .offerings h2 {
+  margin-top: 10vw;
   font-size: 85px;
+  padding: 1vw;
   line-height: 0.9;
 }
 
@@ -144,15 +148,17 @@ h2 span{
   margin-bottom: 10px;
   font-weight: 700;
   color: #333;
+ margin-top: 0;
 }
 
 .offers-grid {
-   display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
-  max-width: 100%;   /* use full page width */
-  margin-top: 5px;         /* remove edges */
-  padding: 0 40px;   /* optional: keep a little breathing room on sides */
+  max-width: 100%;   /* use full page width */         /* remove edges */
+  padding: 20px 40px;   /* optional: keep a little breathing room on sides */
+  margin-bottom: 40vh;
+
 }
 
 .offer-card {
@@ -231,8 +237,9 @@ h2 span{
 }
 
 .whitet{
-color:white;
+color:#05005C;
 display:inline;
+
 
 }
 .btns button{
